@@ -22,12 +22,13 @@ header {
     min-height: 100vh;
     position: relative;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
 .gold-shape {
-      position: absolute;
+    position: absolute;
     top: -60px;
     left: -180px;
     width: 700px;
@@ -39,7 +40,7 @@ html{
 }
 
 nav {
-     position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -162,6 +163,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 40px 20px 40px 40px;
+
 }
 
 .hero-image .image {
@@ -173,6 +175,34 @@ nav {
     position: relative;
     z-index: 2;
 }
+
+.image:hover {
+    animation: shake 0.4s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(2px, -2px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translate(-2px, 2px) rotate(2deg);
+    }
+
+    75% {
+        transform: translate(2px, 2px) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
 
 .hero-content {
     position: relative;
@@ -240,6 +270,7 @@ nav {
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
+
 }
 
 .follow span {
@@ -258,7 +289,6 @@ nav {
     gap: 15px;
 }
 
-
 .social-icons a {
     width: 40px;
     height: 40px;
@@ -276,9 +306,10 @@ nav {
 
     transition: 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
 }
 
-.scroll-down{
+.scroll-down {
     position: absolute;
     bottom: 80px;
     left: 50%;
@@ -286,13 +317,17 @@ nav {
     font-size: 25px;
     color: var(--gold);
     animation: bounce 1.5s infinite;
+
 }
 
-@keyframes bounce{
-    0%,100%{
+@keyframes bounce {
+
+    0%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
-    50%{
+
+    50% {
         transform: translateX(-50%) translateY(10px);
     }
 }
